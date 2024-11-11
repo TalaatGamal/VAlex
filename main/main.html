@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning !!</title>
+    <link rel="stylesheet" href="main.css">
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <div class="cobh">
+
+        <div class="logo">
+            <h4>Talaat Gamal | AlexBank</h4>
+            <form id="passwordForm" onsubmit="return checkPassword()">
+                <!-- <label for="password">أدخل كلمة المرور:</label> -->
+                <input type="password" id="password" name="password" required style="text-align: center;">
+                <!-- <button type="submit">تحقق</button> -->
+            </form>
+            <script>
+                function checkPassword() {
+                    const enteredPassword = document.getElementById("password").value;
+            
+                    if (enteredPassword === "MA") {
+                        // alert("كلمة المرور صحيحة، يمكنك الدخول (النوع 1)!");
+                        document.querySelector('.war1').style.display = 'none';
+                        document.querySelector('.body').style.overflow = 'auto';
+                        document.querySelector('.cobh').style.overflow = 'auto';
+                        return false;
+                    } else if (enteredPassword === "AB") {
+                        // alert("كلمة المرور صحيحة، يمكنك الدخول (النوع 2)!");
+                        document.querySelector('.war2').style.display = 'none';
+                        document.querySelector('.body').style.overflow = 'auto';
+                        document.querySelector('.cobh').style.overflow = 'auto';
+
+                        return false;
+                    } else if (enteredPassword === "OK") {
+                        // alert("كلمة المرور صحيحة، يمكنك الدخول (النوع 3)!");
+                        document.querySelector('.war3').style.display = 'none';
+                        document.querySelector('.body').style.overflow = 'auto';
+                        document.querySelector('.cobh').style.overflow = 'auto';
+
+                        return false;
+                    } else if (enteredPassword === "AM") {
+                        // alert("كلمة المرور صحيحة، يمكنك الدخول (النوع 4)!");
+                        document.querySelector('.war4').style.display = 'none';
+                        document.querySelector('.body').style.overflow = 'auto';
+                        document.querySelector('.cobh').style.overflow = 'auto';
+
+                        return false;
+                    } else if (enteredPassword === "all") {
+                        // alert("كلمة المرور صحيحة، يمكنك الدخول (للكل)!");
+                        document.querySelector('.war1').style.display = 'none';
+                        document.querySelector('.war2').style.display = 'none';
+                        document.querySelector('.war3').style.display = 'none';
+                        document.querySelector('.war4').style.display = 'none';
+                        // document.querySelector('.').style.display = 'none';
+                        document.querySelector('.body').style.overflow = 'auto';
+                        document.querySelector('.cobh').style.overflow = 'auto';
+
+                        // document.querySelector('.body').style.backgroundImage = "url('https://images.pexels.com/photos/7832609/pexels-photo-7832609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
+                        return false;
+                    } else {
+                        alert("كلمة المرور غير صحيحة، حاول مرة أخرى.");
+                        return false;
+                    }
+                }
+            </script>
+            
+        </div> 
+        <div class="main" style="border: none;">
+            <img src="https://res.cloudinary.com/alex-bank/image/upload/w_auto,c_scale/fl_lossy/c_scale,w_auto/f_auto,q_auto/dpr_auto/prod/publicportal/media-and-news/Cards_youth_20211" alt="">
+            <div class="nums">
+                <h2>all >/>/> All Conta</h2>
+            </div>
+            <div class="nums">
+                <h2><span class="star">*</span>MA</h2>
+                <h2><span class="star" style="color: rgb(255, 174, 0);">*</span>AB</h2>
+                <h2><span class="star" style="color: rgb(55, 255, 0);">*</span>OK</h2>
+                <h2><span class="star" style="color: rgb(0, 213, 255);">*</span>AM</h2>
+            </div>
+            <div class="nums2">
+                <h2><span class="star">*</span>My Account</h2>
+                <h2><span class="star" style="color: rgb(255, 174, 0);">*</span>AlexBank</h2>
+                <h2><span class="star" style="color: rgb(68, 255, 0);">*</span>O-key</h2>
+                <h2><span class="star" style="color: rgb(0, 200, 255);">*</span>ATM Machine</h2>
+            </div>
+            
+        </div>
+        <div class="main2">
+    
+            <h2 style="margin-top: 0px;">My Account</h2>
+            <div class="acc">
+                <h3>Account NUM<span>305064597001</span></h3>
+                <h3>Account Owner<span>طلعت جمال نزيه عطيه</span></h3>
+                <h3>IBAN<span>EG360005300500000305064597001</span></h3>
+                <h3>My Phone NUM<span>01147651320</span></h3>
+                <h3>Account Opening Date<span>10 / 11 / 2024</span></h3>
+                <h3>Type<span>Youth Saving Account</span></h3>
+            </div>
+    
+            <h2 style="margin-top: 0px;">AlexBank APP</h2>
+            <div class="alex">
+                <h3>UserName<span>305064597</span></h3>
+                <h3>Password<span>Tt123456#</span></h3>
+            </div>
+            
+            <h2>O-key APP</h2>
+            <div class="okey">
+                <h3>Password<span>1357</span></h3>
+            </div>
+    
+            <h2>ATM Machine</h2>
+            <div class="atm">
+                <h3>Password<span>( Not Valid Now ) 7531</span></h3>
+            </div>
+    
+        </div>
+        
+    
+        <div class="war1">Youth Visa Card Information</div>
+        <div class="war2"></div>
+        <div class="war3"></div>
+        <div class="war4"></div>
+
+    </div>
+
+</body>
+</html>
