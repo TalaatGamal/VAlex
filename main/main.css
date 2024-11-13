@@ -37,7 +37,8 @@ body{
     background-color: rgb(0, 0, 0);
     /* padding-top: 200px; */
     padding-bottom: 200px;
-    overflow-x: hidden;
+    overflow: hidden;
+    z-index: 5;
 }
 .main{
     display: flex;
@@ -166,6 +167,21 @@ h3{
     font-size: 35px;
     /* display: none; */
 }
+.war5{
+    background-color: rgb(0, 0, 0);
+    width: 50vw;
+    position: fixed;
+    z-index: 4;
+    top: 422px;
+    left: 0px;
+    height: 40vh;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    color: #ffffff;
+    font-size: 35px;
+    /* display: none; */
+}
 form{
     position: fixed;
     top: 30px;
@@ -191,7 +207,7 @@ input{
     /* background-color: #b60303; */
     width: 400px;
     gap: 40px;
-    /* display: none; */
+    display: none;
 }
 .nums h2{
     width: max-content;
@@ -234,6 +250,7 @@ input{
     .cobh{
         background-color: rgba(0, 0, 0, 0.793);
         overflow: hidden;
+        z-index: 5;
     }
     h3{
         width: 90vw;
@@ -254,7 +271,7 @@ input{
         align-items: center;
         justify-content: center;
         /* margin-top: 80px; */
-        background-color: black;
+        /* background-color: black; */
         font-size: 25px;
         z-index: 2;
     }
@@ -269,6 +286,33 @@ input{
     }
     .war4{
         display: none;
+    }
+    .war5{
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+        background-image: url(https://images.pexels.com/photos/7832609/pexels-photo-7832609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        /* background-image: url(https://images.pexels.com/photos/9149407/pexels-photo-9149407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+        /* background-image: url(https://images.pexels.com/photos/9394300/pexels-photo-9394300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+        background-position: 30%;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: 3;
+    }
+    .war6{
+        background-color: rgba(0, 0, 0, 0.793);
+        width: 100vw;
+        position: fixed;
+        z-index: 4;
+        top: 422px;
+        left: 0px;
+        height: 50vh;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        color: #ffffff;
+        font-size: 35px;
+        /* display: none; */
     }
     form{
         position: fixed;
