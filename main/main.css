@@ -90,8 +90,10 @@ h3{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: #6c00007c;
-    border-bottom: #ff0000b1 solid 3.5px;
+    /* background-color: #6c00007c;
+    border-bottom: #ff0000b1 solid 3.5px; */
+    background-color: rgb(0, 76, 56);
+    border-bottom: rgb(0, 255, 187) solid 3.5px;
     /* box-shadow: #ff0000 0px 5px 20px 0px; */
     color: #ffffff;
     margin-top: 20px;
@@ -270,7 +272,7 @@ input{
 @media (max-width:780px) {
     body{
         overflow: hidden;
-        background-image: url(https://images.pexels.com/photos/7832609/pexels-photo-7832609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        background-image: url(https://images.pexels.com/photos/16149881/pexels-photo-16149881/free-photo-of-flower-in-vase.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
         /* background-image: url(https://images.pexels.com/photos/9149407/pexels-photo-9149407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
         /* background-image: url(https://images.pexels.com/photos/9394300/pexels-photo-9394300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
         background-position: 30%;
@@ -278,7 +280,7 @@ input{
         background-attachment: fixed;
     }
     .cobh{
-        background-color: rgba(0, 0, 0, 0.793);
+        background-color: rgba(0, 0, 0, 0.651);
         overflow: hidden;
         z-index: 5;
     }
@@ -320,9 +322,9 @@ input{
     .war5{
         width: 100%;
         height: 60vh;
-        top: 50vh;
+        top: 45vh;
         overflow: hidden;
-        background-image: url(https://images.pexels.com/photos/7832609/pexels-photo-7832609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        background-image: url(https://images.pexels.com/photos/16149881/pexels-photo-16149881/free-photo-of-flower-in-vase.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
         /* background-image: url(https://images.pexels.com/photos/9149407/pexels-photo-9149407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
         /* background-image: url(https://images.pexels.com/photos/9394300/pexels-photo-9394300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
         background-position: 30%;
@@ -331,11 +333,11 @@ input{
         z-index: 3;
     }
     .war6{
-        background-color: rgba(0, 0, 0, 0.793);
-        width: 100vw;
+      background-color: rgba(0, 0, 0, 0.651);
+      width: 100vw;
         position: fixed;
         z-index: 4;
-        top: 50vh;
+        top: 45vh;
         left: 0px;
         height: 60vh;
         /* display: flex;
