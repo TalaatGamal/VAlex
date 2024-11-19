@@ -9,16 +9,18 @@ let isSidebarOpen = false; // حالة السايد بار (مفتوح أو مغ
 
 // إضافة حدث للنقر على الأيقونة
 menuIcon.addEventListener('click', function() {
-    if (isSidebarOpen) {
-        sidebar.style.right = '-100%'; // إخفاء الشريط الجانبي
-        isSidebarOpen = false;
-    } else {
-        sidebar.style.right = '0'; // إظهار الشريط الجانبي
-        sidebar.style.overflow = 'auto'
-        sidebar.style.transition = 'right 0.3s ease';
-        isSidebarOpen = true;
+  if (isSidebarOpen) {
+      sidebar.style.right = '-100%'; // إخفاء الشريط الجانبي
+      isSidebarOpen = false;
+      document.querySelector('.header').style.height = '8vh';
+  } else {
+      sidebar.style.right = '0'; // إظهار الشريط الجانبي
+      sidebar.style.transition = 'right 0.3s ease';
+      isSidebarOpen = true;
+      document.querySelector('.header').style.height = '100vh';
     }
 });
+
 
 // عندما يبدأ اللمس
 // document.addEventListener('touchstart', (e) => {
