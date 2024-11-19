@@ -46,8 +46,50 @@
               <div class="fifa">
     
                 <div class="inpo">
-                  <div id="passwordo">ATM</div>
-                  <p id="error-msg" style="color: red; display: none; z-index: 90; background-color: black; width: 100%; height: 3vh; margin: 5px; margin-top: 0vh; padding-left: 19%; border-radius: 5px;">Your password is not correct</p>
+                  <div class="lara">
+                  
+                    <div class="space" style="color: rgba(1, 73, 137, 0);" id="loro">warning</div> <!--just space-->
+                    <div id="loro">ATM</div>
+                    <!-- <div class="waning" style="color: red; animation: fadeInOut 1s infinite;" id="loro">warning</div> -->
+                    <!-- space -->
+                    
+                    <div class="dropdown2">
+                      <button class="dropdown-button2" style="color: rgb(0, 169, 101); animation: fadeInOut 1s infinite; cursor: pointer; background-color: rgba(240, 248, 255, 0); border: none;" id="loro">Click me !!</button>
+                      <div class="dropdown-menu2">
+                        <a href="#" id="dma" style="text-align: center; background-color: rgba(240, 248, 255, 0); color: #ffffff;">Youth Account & Visa from AlexBank</a>
+                        <a href="#" id="dma" style="text-align: center; background-color: rgba(240, 248, 255, 0); color: #ffffff;">Important Warning ~ | ~ تحذير هام</a>
+                        <a href="#" id="dma">الطريقه الوحيده <span  class="vfd"> للايداع من </span> خلال ماكينات <span  class="vfd"> البنوك الاخري</span> هي باستخدام المعاملات بدون بطاقه ثم <span  class="vfd"> ادخال رقم الحساب</span> الخاص بك </a>
+                        <a href="#" id="dma">لا يمكن<span  class="vfd"> استخدام الفيزا للايداع</span> الا من خلال <span  class="vfd"> ماكينات بنك الاسكندريه</span></a>
+                        <a href="#" id="dma">يمكن السحب من  ماكينات البنوك الاخري</a>
+                      </div>
+                    </div>
+
+                    <script>
+                      const dropdownButton = document.querySelector('.dropdown-button2');
+                      const dropdownMenu = document.querySelector('.dropdown-menu2');
+                  
+
+                            // إضافة حدث للنقر على الأيقونة
+                      dropdownButton.addEventListener('click', () => {
+                        if (isSidebarOpen) {
+                          dropdownMenu.style.right = '0'; // إظهار الشريط الجانبي
+                            dropdownMenu.style.transition = 'right 0.3s ease';
+                            isSidebarOpen = false;
+
+                        } 
+                        else {
+                    
+                          dropdownMenu.style.right = '-110%'; // إظهار الشريط الجانبي
+                            dropdownMenu.style.transition = 'right 0.3s ease';
+                            isSidebarOpen = true;
+                          }
+                      });
+                    </script>
+                    
+                    <!-- space -->
+                    <p id="error-msg" style="color: red; display: none; z-index: 90; background-color: black; width: 100%; height: 3vh; margin: 5px; margin-top: 0vh; padding-left: 19%; border-radius: 5px;">Your password is not correct</p>
+                  
+                  </div>
                 </div>
           
               <a href="#projects">
