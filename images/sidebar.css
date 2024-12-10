@@ -24,6 +24,21 @@
   display: none;
   /* display: block; */
 }
+.menu-icon img{
+  width: 35px;
+  animation: rotata 3s linear infinite;
+  background-color: #08a983;
+  border-radius: 5px;
+}
+
+@keyframes rotata {
+  0% {
+      transform:  rotate(0deg);
+  }
+  100% {
+      transform:  rotate(360deg);
+  }
+}
 
 .sidebar .inpo{
   width: 20vw; 

@@ -1,0 +1,619 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix</title>
+    <link rel="stylesheet" href="history.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  </head>
+<body>
+
+  <div class="text">
+    <h1 class="name">Dev<span> \--_--/ </span>Talaat Gamal</h1>
+    <h3>Если вам понравился этот сайт, я могу создать для вас индивидуальный сайт по доступной цене, просто свяжитесь со мной.</h3>
+    <br>
+    <hr style="width: 80vw;">
+    <hr style="width: 80vw;">
+    <hr style="width: 80vw;">
+    <br>
+    <h3>If you like this site, I can create a customized site for you at an affordable price, just contact me.</h3>
+  </div>
+
+
+
+    
+    
+      <canvas id="matrix"></canvas>
+        <script>
+            // Get the canvas element
+            var canvas = document.getElementById('matrix');
+            var ctx = canvas.getContext('2d');
+
+            // Initial canvas dimensions
+            function setCanvasDimensions() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            // Characters to be displayed in the matrix
+            var characters = '#$%&@*';
+
+            // Array to store column positions
+            var columns = [];
+
+            // Function to update column positions based on window width
+            function setColumns() {
+                var numColumns = Math.floor(canvas.width / 20);  // Number of columns based on screen width
+                columns = [];  // Clear the columns array
+                for (var i = 0; i < numColumns; i++) {
+                    columns[i] = Math.floor(Math.random() * canvas.height);
+                }
+            }
+
+            // Drawing function
+            function draw() {
+                // Black background to create trail effect
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Text color
+                ctx.fillStyle = ' rgb(0, 204, 255)';
+
+                // Font style and size
+                ctx.font = '15px Arial';
+
+                // Loop through each column
+                for (var i = 0; i < columns.length; ++i) {
+                    // Pick a random character
+                    var text = characters.charAt(Math.floor(Math.random() * characters.length));
+
+                    // Draw the character at the current position
+                    ctx.fillText(text, i * 20, columns[i] * 20);
+
+                    // Move the position of the column down
+                    if (columns[i] * 20 > canvas.height && Math.random() > 0.975) {
+                        columns[i] = 0;
+                    }
+
+                    columns[i]++;
+                }
+
+                // Delay before next frame
+                setTimeout(draw, 60); // Change the number here to increase or decrease speed
+            }
+
+            // Set canvas dimensions and columns initially
+            setCanvasDimensions();
+            setColumns();
+
+            // Start animation
+            draw();
+
+            // Update canvas dimensions and columns when the window is resized
+            window.onresize = function() {
+                setCanvasDimensions();
+                setColumns();
+            };
+          </script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,55 +1,1160 @@
-<!DOCTYPE html> <!--⚠️🔒Security Or ⚠️💫Error Page-->
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error !!</title> <!--⚠️🔒Security Or ⚠️💫Error Page-->
-    <link rel="icon" href="https://cdn.vectorstock.com/i/500p/67/24/re-wrong-cross-symbol-handwritten-vote-ink-vector-34966724.jpg">
-    <link rel="stylesheet" href="images/sec.css">
-        <!-- Google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-</head>
-<body><!--⚠️🔒Security Or ⚠️💫Error Page-->
+    <title>Matrix</title>
+    <link rel="stylesheet" href="history.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  </head>
+<body>
 
-    <div class="main">
-      <div class="top">
-        <h1>404 <span>Error</span></h1>
-        <h2>Sorry Page is Not Found</h2>
+  <div class="text">
+    <h1 class="name">Dev<span> \--_--/ </span>Talaat Gamal</h1>
+    <h3>Если вам понравился этот сайт, я могу создать для вас индивидуальный сайт по доступной цене, просто свяжитесь со мной.</h3>
+    <br>
+    <hr style="width: 80vw;">
+    <hr style="width: 80vw;">
+    <hr style="width: 80vw;">
+    <br>
+    <h3>If you like this site, I can create a customized site for you at an affordable price, just contact me.</h3>
+  </div>
+
+
+
+    
+    
+      <canvas id="matrix"></canvas>
         <script>
-          let clickCount = 0; // عداد النقرات
-          const maxClicks = 5; // عدد النقرات المطلوب
-          const timeLimit = 500; // الحد الزمني بين النقرات بالمللي ثانية (1 ثانية)
-          let timer; // المؤقت
-      
-          document.addEventListener('click', () => {
-            clearTimeout(timer);
-            clickCount++;
-      
-            if (clickCount === maxClicks) {
-              document.querySelector('.content').style.display = 'block';
-              clickCount = 0;
-              return;
+            // Get the canvas element
+            var canvas = document.getElementById('matrix');
+            var ctx = canvas.getContext('2d');
+
+            // Initial canvas dimensions
+            function setCanvasDimensions() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
             }
-            timer = setTimeout(() => {
-              clickCount = 0;
-            }, timeLimit);
-          });
-        </script>
-      </div>
-      <div class="content">
-            
-            <form id="passwordForm" onsubmit="return checkPassword()">
-                <!-- <label for="password">أدخل كلمة المرور:</label> -->
-                <input type="password" id="password" name="password" required style="text-align: center;">
-                <!-- <button type="submit">تحقق</button> -->
-            </form>
-            
-            
-        </div>
-    </div>
+
+            // Characters to be displayed in the matrix
+            var characters = '#$%&@*';
+
+            // Array to store column positions
+            var columns = [];
+
+            // Function to update column positions based on window width
+            function setColumns() {
+                var numColumns = Math.floor(canvas.width / 20);  // Number of columns based on screen width
+                columns = [];  // Clear the columns array
+                for (var i = 0; i < numColumns; i++) {
+                    columns[i] = Math.floor(Math.random() * canvas.height);
+                }
+            }
+
+            // Drawing function
+            function draw() {
+                // Black background to create trail effect
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Text color
+                ctx.fillStyle = ' rgb(0, 204, 255)';
+
+                // Font style and size
+                ctx.font = '15px Arial';
+
+                // Loop through each column
+                for (var i = 0; i < columns.length; ++i) {
+                    // Pick a random character
+                    var text = characters.charAt(Math.floor(Math.random() * characters.length));
+
+                    // Draw the character at the current position
+                    ctx.fillText(text, i * 20, columns[i] * 20);
+
+                    // Move the position of the column down
+                    if (columns[i] * 20 > canvas.height && Math.random() > 0.975) {
+                        columns[i] = 0;
+                    }
+
+                    columns[i]++;
+                }
+
+                // Delay before next frame
+                setTimeout(draw, 60); // Change the number here to increase or decrease speed
+            }
+
+            // Set canvas dimensions and columns initially
+            setCanvasDimensions();
+            setColumns();
+
+            // Start animation
+            draw();
+
+            // Update canvas dimensions and columns when the window is resized
+            window.onresize = function() {
+                setCanvasDimensions();
+                setColumns();
+            };
+          </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Test1000 -->
 <!-- Test2000 -->
@@ -579,7 +1684,7 @@
             window.onresize = function() {
                 setCanvasDimensions();
                 setColumns();
-         80vw;">
+        80vw;">
     <hr style="width: 80vw;">
     <hr style="width: 80vw;">
     <br>
@@ -749,7 +1854,6 @@
     <br>
     <h3>If you like this site, I can create a customized site for you at an affordable price, just contact me.</h3>
   </div>
-
 
 
     
@@ -9786,7 +10890,7 @@
 
 
 
--->
+ -->
 
 
 
@@ -9795,1319 +10899,769 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-  function checkPassword() {
-  const correcta = "**************************";
-  const enterea = document.getElementById("nevada").value;
-  if (enterea === correcta) {
-      alert("كلمة المرور صحيحة، يمكنك الدخول!");
-      return false;                  
-  } else {
-      alert("كلمة المرور غير صحيحة، حاول مرة أخرى.");
-      return false;
-  }
-  }
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-      function checkPassword() {
-      const correctPassword = "robo";
-      const enteredPassword = document.getElementById("password").value;
-      if (enteredPassword === correctPassword) {
-          // alert("كلمة المرور صحيحة، يمكنك الدخول!");
-          window.location.href = "images/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxn.html";
-          return false;                  
-      } else {
-          alert("كلمة المرور غير صحيحة، حاول مرة أخرى.");
-          return false;
-      }
-      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- start -->
+<!-- 🏛️🏛️🏛️🏛️⚠️⚠️⚠️⚠️ -->
+<!-- end -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+<!-- Warning -->
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning !!</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="sidebar.css">
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <div class="cobh">
+
+      <div class="header">
+        
+          <div class="menu-icon" id="menuIcon">
+              ☰ 
+              <!-- <img src="../images/apps.png" alt=""> -->
+          </div>
+
+          <div class="sidebar" id="sidebar">
+            <div class="ul">
+    
+              <div class="titleo">
+                <h1>My Passwords ⛓️‍💥💙</h1>
+              </div>
+              
+              <div class="fifa">
+    
+                <div class="inpo">
+                  <div id="passwordo">Visa cvv Code</div>
+                  <p id="error-msg" style="color: red; display: none; z-index: 90; background-color: black; width: 100%; height: 3vh; margin: 5px; margin-top: 0vh; padding-left: 19%; border-radius: 5px;">Your password is not correct</p>
+                </div>
+          
+              <a href="#projects">
+                  <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTX4_-K54xxfdXc6hQcAl_P6AN5P0iNl9B0Q&s" alt="" class="imo">cvv Code<img src="images/arrow.png" alt="" class="arrow5"><img src="images/arrow.png" alt="" class="arrow5"></li>
+                  <li>→ 784<img src="images/arrow.png" alt="" class="arrow5"><img src="images/arrow.png" alt="" class="arrow5"></li>
+              </a>
+    
+              </div>
+              
+              <div class="fifa">
+    
+                <div class="inpo">
+                  <div class="lara">
+                  
+                    <div class="space" style="color: rgba(1, 73, 137, 0);" id="loro">warning</div> <!--just space-->
+                    <div id="loro">ATM</div>
+                    <!-- <div class="waning" style="color: red; animation: fadeInOut 1s infinite;" id="loro">warning</div> -->
+                    <!-- space -->
+                    
+                    <div class="dropdown2">
+                      <button class="dropdown-button2" style="color: rgb(0, 169, 101); animation: fadeInOut 1s infinite; cursor: pointer; background-color: rgba(240, 248, 255, 0); border: none;" id="loro">Click me !!</button>
+                      <div class="dropdown-menu2">
+                        <a href="#" id="dma" style="text-align: center; background-color: rgba(240, 248, 255, 0); color: #ffffff;">Youth Account & Visa from AlexBank</a>
+                        <a href="#" id="dma" style="text-align: center; background-color: rgba(240, 248, 255, 0); color: #ffffff;">Important Warning ~ | ~ تحذير هام</a>
+                        <a href="#" id="dma">الطريقه الوحيده <span  class="vfd"> للايداع من </span> خلال ماكينات <span  class="vfd"> البنوك الاخري</span> هي باستخدام المعاملات بدون بطاقه ثم <span  class="vfd"> ادخال رقم الحساب</span> الخاص بك </a>
+                        <a href="#" id="dma">لا يمكن<span  class="vfd"> استخدام الفيزا للايداع</span> الا من خلال <span  class="vfd"> ماكينات بنك الاسكندريه</span></a>
+                        <a href="#" id="dma">يمكن السحب من  ماكينات البنوك الاخري</a>
+                      </div>
+                    </div>
+
+                    <script>
+                      const dropdownButton = document.querySelector('.dropdown-button2');
+                      const dropdownMenu = document.querySelector('.dropdown-menu2');
+                  
+
+                            // إضافة حدث للنقر على الأيقونة
+                      dropdownButton.addEventListener('click', () => {
+                        if (isSidebarOpen) {
+                          dropdownMenu.style.right = '0'; // إظهار الشريط الجانبي
+                            dropdownMenu.style.transition = 'right 0.3s ease';
+                            isSidebarOpen = false;
+
+                        } 
+                        else {
+                    
+                          dropdownMenu.style.right = '-110%'; // إظهار الشريط الجانبي
+                            dropdownMenu.style.transition = 'right 0.3s ease';
+                            isSidebarOpen = true;
+                          }
+                      });
+                    </script>
+                    
+                    <!-- space -->
+                    <p id="error-msg" style="color: red; display: none; z-index: 90; background-color: black; width: 100%; height: 3vh; margin: 5px; margin-top: 0vh; padding-left: 19%; border-radius: 5px;">Your password is not correct</p>
+                  
+                  </div>
+                </div>
+          
+              <a href="#projects">
+                  <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTX4_-K54xxfdXc6hQcAl_P6AN5P0iNl9B0Q&s" alt="" class="imo">Password<img src="images/arrow.png" alt="" class="arrow5"><img src="images/arrow.png" alt="" class="arrow5"></li>
+                  <li>→ 7529<img src="images/arrow.png" alt="" class="arrow5"><img src="images/arrow.png" alt="" class="arrow5"></li>
+              </a>
+              
+    
+              </div>
+              
+              <div class="fifa">
+    
+                <div class="inpo">
+                  <div id="passwordo">AlexBank App</div>
+                  <p id="error-msg" style="color: red; display: none; z-index: 90; background-color: black; width: 100%; height: 3vh; margin: 5px; margin-top: 0vh; padding-left: 19%; border-radius: 5px;">Your password is not correct</p>
+                </div>
+          
+                <div class="tera">
+    
+                  <a href="#home" id="homeu">
+                    <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAe1BMVEUAAAD///+qqqpVVVWAgID5+fmRkZFvb2/8/PwMDAwREREEBAQaGhry8vLT09MsLCxKSkrn5+cyMjIhISHZ2dnGxsYrKyuHh4c9PT3q6uqXl5e6urrNzc3h4eFgYGCgoKAcHBxDQ0NmZma/v79NTU02NjZ2dnaysrKlpaXFWSCWAAADoUlEQVR4nO2djVbiMBBGSREQaisiivyJf6Dv/4TbPbtnV6etySSTTNj97gOUuQe9B5o0DAYAAAAAAAAA8M9yPZ/fa88Qzmx1YxpuVjPtScJ4WJvfrB+0ZwnhcWT+MBpqT+PPxHzhQnseT8qNIRxK7Zl8mL5TD2O2U+2p+Fzt2h7G1E/ac3G53nd5NB1eaE/G47nq9jCmmmvPxuFzdimXL9rTuXPRr/GTlfZ8jrSzSzmPDE+3No8mw2fwyas7u5T8M9yXXUruGe7PLiXvDH+XXUrOGbZklzLWnreH8oPnYUyRZYZnr1wPY+4yzPDtku/RZPhWe27K4sbHo8nwUXvyr8yds0up3rRn/8zLpa9Hk+GJ9vR/YWaXkkuG+dmlFFl8lffJLiWHDPtll7JUvzt8XNundEH7juqbd3YpundUJwHZbXHS81gJahi9DJeFrIcx7yoZnt1JezQZvkrvIZNdyj55hqWyS0md4SHjyzmPtBkWzS4l3cJWOY6o0bBJ9FW+aylKljQLW273RMPYJchwnOxS4mf4IVJ2KVXkDMfLLmX0GNMjanYp8TJsX4qSJdbCVvzsUuJkOEV2KTEWtu4dl6JkkV/Ycl+KkkV6YYuzFCWLbIYn9heMh1yGU2eXIpVhlx0AcZHZX6CRXYpEhl13AMQlPMNa2aWEZlgvu5Sw/QWBS1Gy+N9RLQ/as3/Fd3+BfnYpr14Zfqq1527js78gj+xS+BnOJbsU7v6CfLJL4WU4q+xS3DMcvgMgLq77CyR2AMTFbX9BmnuiYSwdMnz03HiVFvvClv/Gq7TYMhyy8Sot32/zyjq7lP4M555dSt/+gvyzS+neX3AO2aV0ZXia5addG/v2X5fqzUR/2h8hM/ta68qhJaJ8W9SXTUtkrj2SHx23u8S3kaXgoyO/5Wl5Np9PfnG5PHFuEGXxThWMgSGSAohAJBIQgUgkIAKRSEAEIpGASJDIXWGB/yyQjoj1CZAhRCACEYhABCIQgQhEIAIRiEAEIhCBCEQgAhGIQAQiEIEIRCACEYhABCIQgQhEIAIRiEAEIvmL8J/rsz40/8y+pMRJ7PxHRq1n3D6xLynxGyW33Bfd2a/JPkRN5Kd8uCd/OpzO/ci8pMS/SPOW8I6B2Lpck/fofCX020qsc4RqpzNLZpyjoqpnGY/BYOH+sgfHU2Sm7scy1ILnmZbDYm8/Fqmqx4zXXIxr+zs92hdn/EvPAAAAAAAAAAAAAAD8N/wAkiFbMt6cHDQAAAAASUVORK5CYII=" alt="" class="imo">UserName</li>
+                    <li>→ 305064597</li>
+                </a>
+                <a href="#projects">
+                    <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTX4_-K54xxfdXc6hQcAl_P6AN5P0iNl9B0Q&s" alt="" class="imo">Password<img src="images/arrow.png" alt="" class="arrow5"><img src="images/arrow.png" alt="" class="arrow5"></li>
+                    <li>→ Tt123456#<img src="images/arrow.png" alt="" class="arrow5"><img src="images/arrow.png" alt="" class="arrow5"></li>
+                </a>
+                
+                </div>
+          
+    
+              </div>
+              
+              <div class="fifa">
+    
+                <div class="inpo">
+                  <div id="passwordo">O-Key App</div>
+                  <p id="error-msg" style="color: red; display: none; z-index: 90; background-color: black; width: 100%; height: 3vh; margin: 5px; margin-top: 0vh; padding-left: 19%; border-radius: 5px;">Your password is not correct</p>
+                </div>
+          
+                <a href="#projects">
+                    <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTX4_-K54xxfdXc6hQcAl_P6AN5P0iNl9B0Q&s" alt="" class="imo">Password<img src="images/arrow.png" alt="" class="arrow5"><img src="images/arrow.png" alt="" class="arrow5"></li>
+                    <li>→ 1357<img src="images/arrow.png" alt="" class="arrow5"><img src="images/arrow.png" alt="" class="arrow5"></li>
+                </a>
+    
+              </div>
+              
+              <div class="var">
+                <h2 style="margin-bottom: 5vh;">📵 warning ⚠️</h2>
+                <h3>Never take screenshots or share this information, or you will get into trouble</h3>
+                <h3>لا تقم أبدًا بالتقاط لقطات شاشة أو مشاركة هذه المعلومات، وإلا فسوف تقع في مشكلة</h3>
+              </div>
+              
+            </div>
+          </div>
+        
+      </div>
+      <div class="logo">
+        <h4>Talaat Gamal | AlexBank</h4>
+        <form id="passwordForm" onsubmit="return checkPassword()">
+            <!-- <label for="password">أدخل كلمة المرور:</label> -->
+            <input type="password" id="password" name="password" required style="text-align: center;">
+            <!-- <button type="submit">تحقق</button> -->
+        </form>
+      
+        <script>
+          function checkPassword() {
+              const enteredPassword = document.getElementById("password").value;
+      
+              if (enteredPassword === "MA") {
+                  // alert("كلمة المرور صحيحة، يمكنك الدخول (النوع 1)!");
+                  document.querySelector('.war1').style.display = 'none';
+                  document.querySelector('.body').style.overflow = 'auto';
+                  document.querySelector('.cobh').style.overflow = 'auto';
+                  return false;
+              } else if (enteredPassword === "AB") {
+                  // alert("كلمة المرور صحيحة، يمكنك الدخول (النوع 2)!");
+                  document.querySelector('.war2').style.display = 'none';
+                  document.querySelector('.body').style.overflow = 'auto';
+                  document.querySelector('.cobh').style.overflow = 'auto';
+  
+                  return false;
+              } else if (enteredPassword === "OK") {
+                  // alert("كلمة المرور صحيحة، يمكنك الدخول (النوع 3)!");
+                  document.querySelector('.war3').style.display = 'none';
+                  document.querySelector('.body').style.overflow = 'auto';
+                  document.querySelector('.cobh').style.overflow = 'auto';
+  
+                  return false;
+              } else if (enteredPassword === "AM") {
+                  // alert("كلمة المرور صحيحة، يمكنك الدخول (النوع 4)!");
+                  document.querySelector('.war4').style.display = 'none';
+                  document.querySelector('.body').style.overflow = 'auto';
+                  document.querySelector('.cobh').style.overflow = 'auto';
+  
+                  return false;
+              } else if (enteredPassword === "all") {
+                  // alert("كلمة المرور صحيحة، يمكنك الدخول (للكل)!");
+                  document.querySelector('.war1').style.display = 'none';
+                  document.querySelector('.war2').style.display = 'none';
+                  document.querySelector('.war3').style.display = 'none';
+                  document.querySelector('.war4').style.display = 'none';
+                  document.querySelector('.war5').style.display = 'none';
+                  document.querySelector('.war6').style.display = 'none';
+                  // document.querySelector('.').style.display = 'none';
+                  document.querySelector('.body').style.overflow = 'auto';
+                  document.querySelector('.cobh').style.overflow = 'auto';
+                  document.querySelector('.menu-icon').style.display = 'block';
+                  document.querySelector('.sidebar').style.display = 'block';
+                  document.querySelector('.header').style.display = 'flex';
+  
+                  // document.querySelector('.body').style.backgroundImage = "url('https://images.pexels.com/photos/7832609/pexels-photo-7832609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
+                  return false;
+              } else {
+                  alert("كلمة المرور غير صحيحة، حاول مرة أخرى.");
+                  return false;
+              }
+          }
       </script>
+        
+        </div> 
+        <div class="main" style="border: none;">
+            <img src="https://res.cloudinary.com/alex-bank/image/upload/w_auto,c_scale/fl_lossy/c_scale,w_auto/f_auto,q_auto/dpr_auto/prod/publicportal/media-and-news/Cards_youth_20211" alt="">
 
-</body><!--⚠️🔒Security Or ⚠️💫Error Page-->
+            <h2><span class="star" style="color: rgb(0, 255, 187);">*</span> My <span class="star" style="color: rgb(0, 255, 187);">Card</span> Information </h2>
+            <div class="acc">
+                <h3>Owner Name<span>TALAAT GAMAL NAZIH A</span></h3>
+                <h3>Visa Card NUM<span>4090<span class="vega-c">_</span>0000<span class="vega-c">_</span>1579<span class="vega-c">_</span>2388</span></h3>
+                <h3>Valid Thru<span><span class="imjh"> M / Y </span><span class="vega-c">→</span> 11 / 28</span></h3>
+                <h3>Type<span>Debit Card</span></h3>
+                <h3>Bank and Subsidiary<span>AlexBank - Visa</span></h3>
+                <h3>------\--_--/------<span>------\--_--/------</span></h3>
+            </div>
+            <br>
+            <!-- <h2> <span class="vega-c" style="color: rgb(255, 0, 0);"> ------------ </span>ATM<span class="vega-c" style="color: rgb(255, 0, 0);"> ------------ </span> </h2>
+            <br>
+            <div class="atm">
+                <h3>Password<span>( Not Valid Now ) 7529</span></h3>
+            </div> -->
+    
+            <div class="nums">
+                <h2>all >/>/> All Conta</h2>
+            </div>
+            <div class="nums">
+                <h2><span class="star">*</span>MA</h2>
+                <h2><span class="star" style="color: rgb(255, 174, 0);">*</span>AB</h2>
+                <h2><span class="star" style="color: rgb(55, 255, 0);">*</span>OK</h2>
+                <h2><span class="star" style="color: rgb(0, 213, 255);">*</span>AM</h2>
+            </div>
+            <div class="nums2">
+                <h2><span class="star">*</span>My Account</h2>
+                <h2><span class="star" style="color: rgb(255, 174, 0);">*</span>AlexBank</h2>
+                <h2><span class="star" style="color: rgb(68, 255, 0);">*</span>O-key</h2>
+                <h2><span class="star" style="color: rgb(0, 200, 255);">*</span>ATM Machine</h2>
+            </div>
+            
+        </div>
+        <div class="main2">
+    
+          <img src="https://en.amwalalghad.com/wp-content/uploads/2018/08/AlexBank-2.jpg" alt="">
+
+            <h2><span class="star" style="color: rgb(0, 255, 187);">*</span> My <span class="star" style="color: rgb(0, 255, 187);">Account</span> information</h2>
+            <div class="acc">
+                <h3>Account NUM<span>305064597001</span></h3>
+                <h3>Account Owner<span>طلعت جمال نزيه عطيه</span></h3>
+                <h3>IBAN<span>EG360005300500000305064597001</span></h3>
+                <h3>My Phone NUM<span>01147651320</span></h3>
+                <h3>Account Opening Date<span>10 / 11 / 2024</span></h3>
+                <h3>Type<span>Youth Saving Account</span></h3>
+            </div>
+    
+            <!-- <h2> <span class="vega-c"> ------------ </span> AlexBank APP <span class="vega-c"> ------------ </span> </h2>
+            <div class="alex">
+                <h3>UserName<span>305064597</span></h3>
+                <h3>Password<span>Tt123456#</span></h3>
+            </div>
+            
+            <h2> <span class="vega-c"> ------------ </span> O-key APP <span class="vega-c"> ------------ </span> </h2>
+            <div class="okey">
+                <h3>Password<span>1357</span></h3>
+            </div> -->
+
+        </div>
+        
+        
+        <div class="war1">Youth Visa Card Information</div>
+        <div class="war2"></div>
+        <div class="war3"></div>
+        <div class="war4"></div>
+        <div class="war5"></div>
+        <div class="war6"></div>
+
+      </div>
+      <div class="yazam">
+        <h1>404 <span>Error</span></h1>
+        <h2>Sorry Page is Not Found</h2>
+      </div>
+    <script>
+      let clickCount = 0; // عداد النقرات
+      const maxClicks = 5; // عدد النقرات المطلوب
+      const timeLimit = 500; // الحد الزمني بين النقرات بالمللي ثانية (1 ثانية)
+      let timer; // المؤقت
+  
+      document.addEventListener('click', () => {
+        clearTimeout(timer);
+        clickCount++;
+  
+        if (clickCount === maxClicks) {
+          document.querySelector('.yazam').style.display = 'none';
+          document.querySelector('.cobh').style.display = 'flex';
+          clickCount = 0;
+          return;
+        }
+        timer = setTimeout(() => {
+          clickCount = 0;
+        }, timeLimit);
+      });
+      </script>
+    <script src="sidebar.js"></script>
+</body>
 </html>
